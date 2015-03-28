@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            body, html {
+                width:100%;
+                overflow:hidden;
+                height:100%;
+                padding:0;
+                margin:0;
+                text-align:center;
+                color:#ddd;
+                background-color:#000;
+                font-family:sans-serif;
+            }
+            p {
+                margin:0 0 1em 0;
+                padding:0;
+                font-size:2em;
+            }
+            .character {
+                font-size:20em;
+                margin:0.2em;
+            }
+            .details {
+                display:none;
+            }
+            .show-details .details {
+                display:block;
+            }
+        </style>
+    </head>
+    <script type="template">
+        <p class="character">{{ character }}</p>
+        <div class="details">
+            <p class="english-name">{{ englishName }}</p>
+            <p class="thai-name">{{ thaiName }}</p>
+            <p class="char-class">{{ charClass }} class</p>
+        </div>
+    </script>
+    <body>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+        <script src="app.js"></script>
+        <script>
+            window.addEventListener("load", app.init, false);
+        </script>
+    </body>
+</html>
